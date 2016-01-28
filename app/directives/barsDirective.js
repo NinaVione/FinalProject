@@ -1,5 +1,8 @@
 app.directive('bars', ['chartTransitions',
   function(chartTransitions) {
+
+    'use strict';
+    
     return {
       require: '^chart',
       scope: {},

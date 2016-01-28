@@ -1,7 +1,10 @@
 app.directive('chart', function() {
+
+  'use strict';
+  
   return {
     replace: true,
-    controller: chartController,
+    controller: 'chartController',
     controllerAs: 'ctrl',
     bindToController: true,
     link: function($scope, element, attrs, ctrl) {
@@ -69,26 +72,3 @@ app.directive('chart', function() {
     }
   };
 });
-
-function chartController() {
-
-  var elements = [];
-
-  this.addListener = function(observer) {
-    elements.push(observer)
-  };
-
-  this.removeListener = function(observer) {
-    var index = elements.indexOf(observer);
-
-    if (index) {
-      elements.splice(index, 1)
-    }
-  };
-
-  this.notify = function(message) {
-    for (var i = elements.length - 1; i >= 0; i--) {
-      elements[i](message)
-    }
-  };
-}

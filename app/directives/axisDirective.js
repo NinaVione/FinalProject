@@ -1,4 +1,7 @@
 app.directive('axis', function() {
+
+  'use strict';
+  
   return {
     require: '^chart',
     scope: {

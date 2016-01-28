@@ -27,29 +27,31 @@
         <label>{{ 'AGE' | translate }}: {{ $storage.user.age }}</label>
       </div>
     </div>
-    <component>
-      <div class="btn-group" uib-dropdown>
-        <button class="btn btn-default" uib-dropdown-toggle>
-          Filter <span class="caret"></span>
-        </button>
-        <ul uib-dropdown-menu>
-          <li>
-            <a ng-click="main.update(1)">All</a>
-          </li>
-          <li>
-            <a ng-click="main.update(2)">Filter A</a>
-          </li>
+    <div class="chart-block">
+      <component>
+        <div class="btn-group" uib-dropdown>
+          <button class="btn btn-default" uib-dropdown-toggle>
+            {{ 'FILTER' | translate }} <span class="caret"></span>
+          </button>
+          <ul uib-dropdown-menu>
             <li>
-            <a ng-click="main.update(3)">Filter B</a>
-          </li>
-        </ul>
-      </div>
-      <chart id="chart" data-data="main.data" data-config="main.config">
-        <bars config-key="bars"></bars>
-        <axis position="left" config-key="bar"></axis>
-        <axis position="bottom" config-key="foo"></axis>
-      </chart>
-    </component>
+              <a ng-click="main.update(1)">{{ 'FILTER_ALL' | translate }}</a>
+            </li>
+            <li>
+              <a ng-click="main.update(2)">{{ 'FILTER_A' | translate }}</a>
+            </li>
+              <li>
+              <a ng-click="main.update(3)">{{ 'FILTER_B' | translate }}</a>
+            </li>
+          </ul>
+        </div>
+        <chart id="chart" data-data="main.data" data-config="main.config">
+          <bars config-key="bars"></bars>
+          <axis position="left" config-key="bar"></axis>
+          <axis position="bottom" config-key="foo"></axis>
+        </chart>
+      </component>
+    </div>
   </div>
   <div class="update-user-info" ng-controller="updateInfoController">
     <div>

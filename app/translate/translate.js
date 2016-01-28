@@ -26,7 +26,11 @@ app.config(['$translateProvider',
       FORGOT_PASSWORD: 'Forgot password?',
       BACK_TO_LOGIN: 'Back to login page',
       REMIND_PASSWORD: 'Remind password',
-      FORGOT_TEXT: 'Please enter your username'
+      FORGOT_TEXT: 'Please enter your username',
+      FILTER: 'Filter',
+      FILTER_ALL: 'ALL',
+      FILTER_A: 'Filter A',
+      FILTER_B: 'Filer B'
     })
 
     .translations('ru', {
@@ -50,7 +54,11 @@ app.config(['$translateProvider',
       FORGOT_PASSWORD: 'Забыли пароль?',
       BACK_TO_LOGIN: 'Вернуться на логин страницу',
       REMIND_PASSWORD: 'Напомнить пароль',
-      FORGOT_TEXT: 'Введите, пожолуйста, имя пользователя'
+      FORGOT_TEXT: 'Введите, пожолуйста, имя пользователя',
+      FILTER: 'Фильтр',
+      FILTER_ALL: 'Все',
+      FILTER_A: 'Фильтр А',
+      FILTER_B: 'Фильтр Б'
     });
     
     $translateProvider.preferredLanguage('en');

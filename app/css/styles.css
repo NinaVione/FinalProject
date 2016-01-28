@@ -142,14 +142,38 @@ body {
 .axis {
   font-size: 12px;
 }
+
 .axis path, .axis line {
   fill: none;
   stroke: #ddd;
   shape-rendering: crispEdges;
 }
+
 .x.axis path {
   display: none;
 }
+
+.dropdown-toggle {
+  min-width: 115px;
+}
+
+ul.dropdown-menu {
+  right: 15px;
+  left: inherit;
+  top: 45px;
+  min-width: 115px;
+}
+
 ul.dropdown-menu li a {
   cursor: pointer;
+}
+
+.chart-block {
+  position: relative;
+}
+
+div.dropdown {
+  top: 0;
+  position: absolute;
+  right: 0;
 }

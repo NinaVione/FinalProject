@@ -1,5 +1,7 @@
 app.service('chartTransitions', function() {
 
+  'use strict';
+
   this.transition = function(entering, chart, transitions, config) {
     var onEnter = entering.transition();
     var transition = chart.transition();
