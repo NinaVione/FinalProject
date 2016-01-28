@@ -134,3 +134,22 @@ body {
   position: absolute;
   top: 0;
 }
+
+.bar {
+  fill: #5bc0de;
+}
+
+.axis {
+  font-size: 12px;
+}
+.axis path, .axis line {
+  fill: none;
+  stroke: #ddd;
+  shape-rendering: crispEdges;
+}
+.x.axis path {
+  display: none;
+}
+ul.dropdown-menu li a {
+  cursor: pointer;
+}
