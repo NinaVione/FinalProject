@@ -1,0 +1,56 @@
+
+<div class="logout" ng-controller="logoutController">
+  <button ui-sref="login" class="btn btn-info" ng-click="signOut()">{{ 'SIGNOUT' | translate }}</button>
+</div>
+
+<div class="translate home-translate" ng-controller="translateController">    
+  <button class="btn btn-info" ng-click="changeToEn()">En</button>
+  <button class="btn btn-info" ng-click="changeToRu()">Ru</button>
+</div>
+
+<div class="row">
+  <div class="user-info" ng-controller="infoController">
+    <div>
+      <h2>{{ 'USER_INFO' | translate }}</h2>
+    </div>
+    <div class="info">
+      <div>
+        <label>{{ 'USERNAME' | translate }}: {{ $storage.user.username }}</label>
+      </div>
+      <div>
+        <label>{{ 'EMAIL_ADDRESS' | translate }}: {{ $storage.user.email }}</label>
+      </div>
+      <div>
+        <label>{{ 'NAME' | translate }}: {{ $storage.user.name }}</label>
+      </div>
+      <div>
+        <label>{{ 'AGE' | translate }}: {{ $storage.user.age }}</label>
+      </div>
+    </div>
+  </div>
+  <div class="update-user-info" ng-controller="updateInfoController">
+    <div>
+      <h2>{{ 'UPDATE_USER_INFO' | translate }}</h2>
+    </div>
+    <div class="update">
+      <form name="updateForm">
+        <div class="form-group">
+          <label>{{ 'EMAIL_ADDRESS' | translate }}</label>
+          <input type="email" name="email" ng-model="email" class="form-control" placeholder="{{ 'EMAIL' | translate }}">
+          <p ng-show="updateForm.email.$invalid && !updateForm.email.$pristine" class="error">{{ 'EMAIL_ERROR' | translate }}</p>
+        </div>
+        <div class="form-group">
+          <label>{{ 'NAME' | translate }}</label>
+          <input name-validator type="text" name="name" ng-model="name" class="form-control" placeholder="{{ 'NAME' | translate }}">
+          <p ng-show="updateForm.name.$invalid" class="error">{{ 'NAME_ERROR' | translate }}</p>
+        </div>
+        <div class="form-group">
+          <label>{{ 'AGE' | translate }}</label>
+          <input age-validator type="text" name="age" ng-model="age" class="form-control" placeholder="{{ 'AGE' | translate }}">
+          <p ng-show="updateForm.age.$invalid" class="error">{{ 'AGE_ERROR' | translate }}</p>
+        </div>
+        <button type="submit" class="btn btn-default" ng-click="submitChanges()">{{ 'SAVE' | translate }}</button>
+      </form>
+    </div>
+  </div>
+</div>

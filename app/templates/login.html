@@ -1,0 +1,22 @@
+<div class="translate" ng-controller="translateController">    
+  <button class="btn btn-info" ng-click="changeToEn()">En</button>
+  <button class="btn btn-info" ng-click="changeToRu()">Ru</button>
+</div>
+
+<form name="loginForm" class="form-signin" ng-controller="loginController" novalidate>
+  <div ng-show="error" class="alert alert-danger">{{ error }}</div>
+  <h2 class="form-signin-heading">{{ 'SIGNIN_TEXT' | translate }}</h2>
+  <input type="text" name="username" ng-model="username" class="form-control" placeholder="{{ 'USERNAME' | translate }}" required autofocus="">
+  <p class="required" ng-show="loginForm.username.$invalid">{{ 'USERNAME_ERROR_REQUIRED' | translate }}</p>
+  <input type="password" name="password" ng-model="password" class="form-control" placeholder="{{ 'PASSWORD' | translate }}" required>
+  <p class="required" ng-show="loginForm.password.$invalid">{{ 'PASSWORD_ERROR_REQUIRED' | translate }}</p>
+  <div class="checkbox">
+    <div class="forgot-password">
+      <a ui-sref="forgor_password">{{ 'FORGOT_PASSWORD' | translate }}</a>
+    </div>
+  </div>
+  <button class="btn btn-lg btn-info btn-block" type="submit" ng-click="runSpinner(); signIn()" ng-disabled="loginForm.$invalid">
+  {{ 'SIGNIN' | translate }}
+  <span loading-directive class="glyphicon glyphicon-refresh loading-icon"></span>
+  </button>
+</form>

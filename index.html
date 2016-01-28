@@ -1,0 +1,34 @@
+<!doctype>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app/css/styles.css">
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/ng-storage/ngStorage.min.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-translate/angular-translate.js"></script>
+    <script src="script.js"></script>
+    <script src="app/routes/routes.js"></script>
+    <script src="app/translate/translate.js"></script>
+    <script src="app/controllers/loginController.js"></script>
+    <script src="app/controllers/logoutController.js"></script>
+    <script src="app/controllers/infoController.js"></script>
+    <script src="app/controllers/updateInfoController.js"></script>
+    <script src="app/controllers/forgotPasswordController.js"></script>
+    <script src="app/controllers/translateController.js"></script>
+    <script src="app/services/dataService.js"></script>
+    <script src="app/directives/loadingDirective.js"></script>
+    <script src="app/directives/ageValidatorDirective.js"></script>
+    <script src="app/directives/nameValidatorDirective.js"></script>
+  </head>
+  <body ng-app="app">
+    <div class="container">
+      <div ui-view></div>
+    </div>
+  </body>
+</html>
