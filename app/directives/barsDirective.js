@@ -2,7 +2,7 @@ app.directive('bars', ['chartTransitions',
   function(chartTransitions) {
 
     'use strict';
-    
+
     return {
       require: '^chart',
       scope: {},
@@ -42,7 +42,7 @@ app.directive('bars', ['chartTransitions',
           var entered = bars.enter().append("rect")
             .attr('class', 'bar')
             .attr('opacity', 0);
-
+            
           var transitions = {};
           transitions.onEnter = (config[key] && config[key].onEnter) ? config[key].onEnter : enter;
           transitions.onTransition = (config[key] && config[key].onTransition) ? config[key].onTransition : transition;

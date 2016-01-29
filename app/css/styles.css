@@ -139,6 +139,10 @@ body {
   fill: #5bc0de;
 }
 
+.bar:hover {
+  fill: #46b8da;
+}
+
 .axis {
   font-size: 12px;
 }
@@ -176,4 +180,10 @@ div.dropdown {
   top: 0;
   position: absolute;
   right: 0;
+}
+
+.chart-data {
+  position: absolute;
+  right: 0;
+  top: 50px;
 }

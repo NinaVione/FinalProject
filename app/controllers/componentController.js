@@ -1,5 +1,5 @@
-app.controller('componentController', [ '$scope',
-  function ($scope) {
+app.controller('componentController', [ '$scope', '$compile',
+  function ($scope, $compile) {
     
     'use strict';
 
@@ -56,6 +56,7 @@ app.controller('componentController', [ '$scope',
         },
         onTransition: function(config) {
           this.duration(1000)
+            /*.attr("ng-click", "onHandleClick($event)")*/
             .attr('opacity', 1)
             .attr("x", function(d) {
               return config.x(d.x);
@@ -67,6 +68,9 @@ app.controller('componentController', [ '$scope',
             .attr("height", function(d) {
               return config.height - config.y(d.y);
             });
+            /*.each("end", function() {
+              $compile(this)($scope);
+            });*/
         },
         onExit: function(config) {
           this.duration(1000)

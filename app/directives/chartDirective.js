@@ -1,7 +1,7 @@
 app.directive('chart', function() {
 
   'use strict';
-  
+
   return {
     replace: true,
     controller: 'chartController',
@@ -33,7 +33,6 @@ app.directive('chart', function() {
         .attr("height", config.height + config.margin.top + config.margin.bottom)
         .append("g")
         .attr("transform", "translate(" + config.margin.left + "," + config.margin.top + ")");
-
 
       config.x = d3.scale.ordinal().rangeRoundBands([0, config.width], .05);
       config.y = d3.scale.linear().range([config.height, 0]);

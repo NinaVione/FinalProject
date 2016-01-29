@@ -9,5 +9,10 @@ app.controller('infoController', ['$scope', 'dataService',
     if (possibleInfo != undefined && possibleInfo.username == currentUser.username) {
       dataService.setStorageData('user', possibleInfo);
     }
+
+    /*$scope.onHandleClick = function(event) {
+      console.log(1);
+    }*/
+
   }
 ]);
