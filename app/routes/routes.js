@@ -9,13 +9,13 @@ app.config(['$stateProvider', '$urlRouterProvider',
 
     .state('login', {
       url: '/login',
-      templateUrl: 'app/templates/login.html',
+      templateUrl: 'app/pages/src/login/src/tpl/login.html',
       controller: 'loginController'
     })
 
     .state('home', {
       url: '/home',
-      templateUrl: 'app/templates/home.html',
+      templateUrl: 'app/pages/src/home/src/tpl/home.html',
       resolve: {
         delay: function($q, $timeout) {
           var delay = $q.defer();
@@ -27,7 +27,7 @@ app.config(['$stateProvider', '$urlRouterProvider',
 
     .state('forgor_password', {
       url: '/forgot_password',
-      templateUrl: 'app/templates/forgotPassword.html',
+      templateUrl: 'app/pages/src/forgot-password/src/tpl/forgotPassword.html',
     })
   }
 ]);
