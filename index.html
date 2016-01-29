@@ -1,4 +1,4 @@
-<!doctype>
+<!doctype html>
 <html>
   <head>
     <meta charset="UTF-8">
@@ -37,6 +37,10 @@
   </head>
   <body ng-app="app">
     <div class="container">
+      <div class="translate" ng-controller="translateController">    
+        <button class="btn btn-info" ng-click="changeToEn()">En</button>
+        <button class="btn btn-info" ng-click="changeToRu()">Ru</button>
+      </div>
       <div ui-view></div>
     </div>
   </body>

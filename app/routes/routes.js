@@ -28,6 +28,7 @@ app.config(['$stateProvider', '$urlRouterProvider',
     .state('forgor_password', {
       url: '/forgot_password',
       templateUrl: 'app/pages/src/forgot-password/src/tpl/forgotPassword.html',
+      controller: 'forgotPasswordController'
     })
   }
 ]);

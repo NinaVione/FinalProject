@@ -1,9 +1,4 @@
-<div class="translate" ng-controller="translateController">    
-  <button class="btn btn-info" ng-click="changeToEn()">En</button>
-  <button class="btn btn-info" ng-click="changeToRu()">Ru</button>
-</div>
-
-<form name="loginForm" class="form-signin" ng-controller="loginController" novalidate>
+<form name="loginForm" class="form-signin" novalidate>
   <div ng-show="error" class="alert alert-danger">{{ error }}</div>
   <h2 class="form-signin-heading">{{ 'SIGNIN_TEXT' | translate }}</h2>
   <input type="text" name="username" ng-model="username" class="form-control" placeholder="{{ 'USERNAME' | translate }}" required autofocus="">
