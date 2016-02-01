@@ -72,7 +72,7 @@ body {
   background-color: #f7f7f9;
 }
 
-.required, .error {
+.error {
   color: #d9534f;
 }
 

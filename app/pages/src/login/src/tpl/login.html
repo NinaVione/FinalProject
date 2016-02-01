@@ -2,9 +2,7 @@
   <div ng-show="error" class="alert alert-danger">{{ error }}</div>
   <h2 class="form-signin-heading">{{ 'SIGNIN_TEXT' | translate }}</h2>
   <input type="text" name="username" ng-model="username" class="form-control" placeholder="{{ 'USERNAME' | translate }}" required autofocus="">
-  <p class="required" ng-show="loginForm.username.$invalid">{{ 'USERNAME_ERROR_REQUIRED' | translate }}</p>
   <input type="password" name="password" ng-model="password" class="form-control" placeholder="{{ 'PASSWORD' | translate }}" required>
-  <p class="required" ng-show="loginForm.password.$invalid">{{ 'PASSWORD_ERROR_REQUIRED' | translate }}</p>
   <div class="checkbox">
     <div class="forgot-password">
       <a ui-sref="forgor_password">{{ 'FORGOT_PASSWORD' | translate }}</a>
