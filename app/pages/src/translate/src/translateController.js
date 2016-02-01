@@ -3,13 +3,15 @@ app.controller('translateController', [ '$scope', '$translate',
 
     'use strict';
 
-    $scope.changeToRu =function () {
-      $translate.use('ru');
+    $scope.changeLang =function (lang) {
+      switch (lang) {
+        case 'EN': 
+          $translate.use('en');
+          break;
+        case 'RU': 
+          $translate.use('ru');
+          break;
+      }
     };
-
-    $scope.changeToEn =function () {
-     $translate.use('en');
-    };
-
   }
 ]);

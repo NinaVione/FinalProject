@@ -1,5 +1,5 @@
-app.controller('forgotPasswordController', ['$scope', 'dataService',
-  function ($scope, dataService) {
+app.controller('forgotPasswordController', ['$scope', 'dataService', '$translate',
+  function ($scope, dataService, $translate) {
 
     'use strict';
 
@@ -14,10 +14,14 @@ app.controller('forgotPasswordController', ['$scope', 'dataService',
     $scope.remindPassword = function (username) {
       var password = dataService.getPassword(username, $scope.users);
 
+      $scope.password = "";
+
       if(password != undefined) {
         $scope.password = password;
       } else {
-        $scope.password = "";
+        $translate(['NO_USER']).then(function (translations) {
+          $scope.password = translations.NO_USER;
+        })
       }
     };
 

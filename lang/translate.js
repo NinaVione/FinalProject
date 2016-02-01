@@ -30,7 +30,8 @@ app.config(['$translateProvider',
       FILTER: 'Filter',
       FILTER_ALL: 'ALL',
       FILTER_A: 'Filter A',
-      FILTER_B: 'Filer B'
+      FILTER_B: 'Filer B',
+      NO_USER: 'No such user.'
     })
 
     .translations('ru', {
@@ -58,7 +59,8 @@ app.config(['$translateProvider',
       FILTER: 'Фильтр',
       FILTER_ALL: 'Все',
       FILTER_A: 'Фильтр А',
-      FILTER_B: 'Фильтр Б'
+      FILTER_B: 'Фильтр Б',
+      NO_USER: 'Такого пользователя нет.'
     });
     
     $translateProvider.preferredLanguage('en');
