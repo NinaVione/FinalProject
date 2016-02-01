@@ -12,17 +12,18 @@
     <script src="bower_components/ng-storage/ngStorage.min.js"></script>
     <script src="bower_components/angular-animate/angular-animate.js"></script>
     <script src="bower_components/angular-translate/angular-translate.js"></script>
+    <script src="bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="bower_components/d3/d3.js"></script>
     <script src="script.js"></script>
     <script src="app/routes/routes.js"></script>
-    <script src="lang/translate.js"></script>
+    <script src="app/translate/translate.js"></script>
     <script src="app/pages/src/login/src/loginController.js"></script>
     <script src="app/pages/src/logout/src/logoutController.js"></script>
     <script src="app/pages/src/home/src/infoController.js"></script>
     <script src="app/pages/src/home/src/updateInfoController.js"></script>
     <script src="app/pages/src/forgot-password/src/forgotPasswordController.js"></script>
-    <script src="app/pages/src/translate/src/translateController.js"></script>
+    <script src="app/translate/translateController.js"></script>
     <script src="app/pages/src/chart/src/chartController.js"></script>
     <script src="app/pages/src/chart/src/componentController.js"></script>
     <script src="app/services/dataService.js"></script>
@@ -38,8 +39,8 @@
   <body ng-app="app">
     <div class="container">
       <div class="translate" ng-controller="translateController">    
-        <button class="btn btn-info" ng-click="changeLang('EN')">En</button>
-        <button class="btn btn-info" ng-click="changeLang('RU')">Ru</button>
+        <button class="btn btn-info" ng-click="switchLanguage('EN')">En</button>
+        <button class="btn btn-info" ng-click="switchLanguage('RU')">Ru</button>
       </div>
       <div ui-view></div>
     </div>

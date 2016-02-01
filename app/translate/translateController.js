@@ -3,7 +3,7 @@ app.controller('translateController', [ '$scope', '$translate',
 
     'use strict';
 
-    $scope.changeLang =function (lang) {
+    $scope.switchLanguage =function (lang) {
       switch (lang) {
         case 'EN': 
           $translate.use('en');
