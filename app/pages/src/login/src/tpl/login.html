@@ -8,8 +8,8 @@
       <a ui-sref="forgor_password">{{ 'FORGOT_PASSWORD' | translate }}</a>
     </div>
   </div>
-  <button class="btn btn-lg btn-info btn-block" type="submit" ng-click="runSpinner(); signIn()" ng-disabled="loginForm.$invalid">
+  <button class="btn btn-lg btn-info btn-block" type="submit" ng-click="signIn()" ng-disabled="loginForm.$invalid">
   {{ 'SIGNIN' | translate }}
-  <span loading-directive class="glyphicon glyphicon-refresh loading-icon"></span>
+    <span ng-if="flag" loading-directive class="glyphicon glyphicon-refresh loading-icon"></span>
   </button>
 </form>

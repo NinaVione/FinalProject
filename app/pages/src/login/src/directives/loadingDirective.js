@@ -6,11 +6,13 @@ app.directive('loadingDirective', function($rootScope) {
     controller: 'loginController',
     link: function(scope, element) {
 
-      scope.runSpinner = function () {
+      if($rootScope.flag) {
         element.removeClass('ng-hide');
-      };
+      } 
 
-      element.addClass('ng-hide');
+      if(!$rootScope.flag) {
+        element.addClass('ng-hide');
+      } 
 
       var unregister = $rootScope.$on('$routeChangeStart', function () {
         element.removeClass('ng-hide');

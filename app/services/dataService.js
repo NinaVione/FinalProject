@@ -43,7 +43,6 @@ app.factory('dataService', ['$rootScope', '$http', '$localStorage', '$sessionSto
       },
 
       isLoggedIn: function () {
-        var r = $rootScope.$storage.user != null;
         return $rootScope.$storage.user != null;
       },
 
@@ -53,6 +52,7 @@ app.factory('dataService', ['$rootScope', '$http', '$localStorage', '$sessionSto
 
       setStorageData: function (dataName, dataContent) {
         $rootScope.$storage[dataName] = dataContent;
+        $rootScope.flag = true;
       },
 
       getStorageData: function () {
@@ -65,6 +65,7 @@ app.factory('dataService', ['$rootScope', '$http', '$localStorage', '$sessionSto
 
       removeStorageData: function (data) {
         delete $localStorage[data];
+        $rootScope.flag = false;
       }
     }
   }
