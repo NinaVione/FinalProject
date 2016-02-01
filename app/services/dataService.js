@@ -1,4 +1,4 @@
-app.service('dataService', ['$rootScope', '$http', '$localStorage', '$sessionStorage',
+app.factory('dataService', ['$rootScope', '$http', '$localStorage', '$sessionStorage',
   function ($rootScope, $http, $localStorage, $sessionStorage) {
     
     'use strict';
